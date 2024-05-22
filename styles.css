@@ -1,0 +1,202 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d3d3d3; /* Medium grey background */
+    color: #333333; /* Dark text for contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    text-align: left;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Make header not cover entire width */
+    margin-top: 40px; /* Increase space between navbar and first header */
+    border-radius: 10px; /* Add some border radius for better visuals */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a {
+    margin-left: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%); /* Make header icons white */
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    flex: 1; /* Ensures the main content takes up the remaining space */
+}
+
+.intro, .professional-skills, .technologies, .projects, .about-me {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+h1, h2 {
+    color: #333333; /* Darker header color for better contrast */
+    text-align: left;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+p {
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.tech-icons div {
+    position: relative; /* Required for the tooltip */
+    display: inline-block;
+    margin: 10px;
+}
+
+.tech-icons img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.tech-icons img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.tech-icons .tooltip {
+    display: none; /* Hide by default */
+    position: absolute;
+    bottom: -30px; /* Position below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.tech-icons div:hover .tooltip {
+    display: block; /* Show on hover */
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust min-width for better layout */
+    gap: 20px;
+    justify-content: center;
+}
+
+.project {
+    background-color: #e0e0e0; /* Light grey background for projects */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for project cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for better visual separation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+}
+
+.project:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.project h3, .project p, .project span {
+    font-size: 1em; /* Set same font size for all text */
+}
+
+.project h3 {
+    margin-top: 0;
+    margin-bottom: 10px; /* Reduce space between title and content */
+}
+
+.project p, .project span {
+    margin-bottom: 10px; /* Reduce space between content and the bottom of the project card */
+}
+
+/* New class for highlighting keywords */
+.highlight {
+    background-color: #ffff99; /* Light yellow background for highlighting */
+    font-weight: bold;
+}
+
+/* Styles for the modern footer */
+footer {
+    background-color: #d3d3d3; /* Same as body background color */
+    color: #333333;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-divider {
+    width: 200%; /* Set the width to 200% for a much wider line */
+    height: 1px; /* Keep the thickness as is */
+    background-color: #000000; /* Black line separator */
+    margin: 20px 0 20px -50%; /* Adjust margin to center the wider line */
+}
+
+.footer-text {
+    font-size: 1em;
+    color: #333333;
+}
